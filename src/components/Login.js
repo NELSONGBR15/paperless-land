@@ -5,8 +5,6 @@ import { BrowserRouter, Router } from "react-router-dom";
 import AdminPage from '../components/Admin';
 
 export default class Login extends Component{
-    
-
 
 render(){
     return(
