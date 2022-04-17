@@ -1,14 +1,14 @@
 import React, {Component} from "react";
+import { NavLink } from "react-router-dom";
+
 import Imagenes from "../Images/Imagenes";
 import '../Styles/Login.css';
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import AdminPage from '../components/Admin';
 
 export default class Login extends Component{
 
 render(){
+
     return(
-        <BrowserRouter>
         <div className="contenedor">
             <div className="Linea" ></div>
             <h1 className="textInicio" >INCIO DE SESION</h1>
@@ -24,19 +24,12 @@ render(){
                 </div>
             <br/>
 
-            <button className="button" >INGRESAR</button>
+            <NavLink to='/Admin' className="button" >INGRESAR</NavLink>
             <br/>
-            <a href="#">¿Olvido su contraseña?</a>
-            <Link to='../components/Admin.js' className="button"  >Ingresar</Link>
+            <NavLink to="/RecoveryPassword">¿Olvido su contraseña?</NavLink>
+
         </div>
 
-        <Routes>
-            <Route path='../components/Admin.js' element={<AdminPage/>}        />
-
-        </Routes>
-
-
-        </BrowserRouter>
         )
     }
 }

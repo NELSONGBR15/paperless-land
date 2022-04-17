@@ -77,7 +77,7 @@ border-left-width: 3px;
 
 .button {
     position: absolute;
-    left: calc(50% - 150px);
+    left: calc(50% - 175px);
     width: 300px;
     top: 200px;
     background-color: #003535; /* Green */
