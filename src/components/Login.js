@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import Imagenes from "../Images/Imagenes";
 import '../Styles/Login.css';
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import AdminPage from '../components/Admin';
 
 export default class Login extends Component{
 
 render(){
     return(
+        <BrowserRouter>
         <div className="contenedor">
             <div className="Linea" ></div>
             <h1 className="textInicio" >INCIO DE SESION</h1>
@@ -22,10 +23,20 @@ render(){
                 <input  type={"password"} className=" Campotext" ></input>
                 </div>
             <br/>
+
             <button className="button" >INGRESAR</button>
             <br/>
             <a href="#">¿Olvido su contraseña?</a>
+            <Link to='../components/Admin.js' className="button"  >Ingresar</Link>
         </div>
+
+        <Routes>
+            <Route path='../components/Admin.js' element={<AdminPage/>}        />
+
+        </Routes>
+
+
+        </BrowserRouter>
         )
     }
 }
