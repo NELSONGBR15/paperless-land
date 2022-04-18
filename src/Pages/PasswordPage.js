@@ -12,7 +12,7 @@ export default function Admin(){
 
         <div>
             OLVIDE MI CONTRASEÑA
-            <button onClick={handleClick}   >DEVUELTA</button>
+            <button onClick={handleClick}   >Go Back</button>
         </div>  
     );
 

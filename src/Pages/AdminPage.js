@@ -3,8 +3,6 @@ import ColumnUsers from '../components/ColumnUsers'
 
 export default function Admin(){
 
-
-
     return(
 
         <div>
